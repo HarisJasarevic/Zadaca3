@@ -123,6 +123,72 @@ public class Main {
 
         System.out.println("\nLarge Array is:" + Arrays.toString(largeArray));
 
+        //Zadatak 7.
+
+        int[] addArray1 = {1, 3, 5, 6};
+        int[] addArray2 = {1, 1, 1, 1, 1, 1, 1};
+
+        int lengthArray1 = addArray1.length;
+        int lengthArray2 = addArray2.length;
+
+        int maxArrayLength;
+        if (lengthArray1 > lengthArray2) {
+            maxArrayLength = lengthArray1;
+        }else {
+            maxArrayLength = lengthArray2;
+        }
+
+        int[] multipliedArray = new int[maxArrayLength];
+
+        for (int i = 0; i < maxArrayLength; i++) {
+            if (i < lengthArray1 && i < lengthArray2) {
+                multipliedArray[i] = addArray1[i] + addArray2[i];
+            } else if (i < lengthArray1) {
+                multipliedArray[i] = addArray1[i];
+            } else if (i < lengthArray2) {
+                multipliedArray[i] = addArray2[i];
+            }
+        }
+
+        for (int result : multipliedArray) {
+            System.out.print("\n");
+            System.out.print(result + " ");
+        }
+
+        //Zadatak 8.
+
+        String[] randomWordsArray = {"Arsenal", "Highbury", "champions", "crypt", "Myths"};
+
+        String[] noVowelsArray = new String[randomWordsArray.length];
+        int count = 0;
+
+        for (String randomWord : randomWordsArray) {
+            if (!randomWord.matches(".*[aeiouAEIOU].*")) {
+                noVowelsArray[count++] = randomWord;
+            }
+        }
+
+        String[] resultArray = new String[count];
+
+        System.arraycopy(noVowelsArray, 0, resultArray, 0, count);
+        System.out.println("\n");
+        System.out.println(Arrays.toString(resultArray));
+
+        //Zadatak 9.
+
+        int[] firstArray1 = {1, 2, 3};
+        int[] secondArray1 = {1, 2, 3};
+
+        int sumArray = 0;
+
+        for (int i = 0; i < firstArray1.length; i++) {
+            for (int j = 0; j < secondArray1.length; j++) {
+                sumArray += firstArray1[i] + secondArray1[j];
+            }
+        }
+
+        System.out.println("\nSum of elements in Arrays is: " + sumArray);
+
 
 
     }
