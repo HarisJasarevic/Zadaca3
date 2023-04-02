@@ -93,10 +93,10 @@ public class Main {
         System.out.println("Enter the last number in range: ");
         int rangeEnd = scanner2.nextInt();
 
-        System.out.println("Even numbers in range are: ");
+        System.out.print("Even numbers in range are: ");
         for (int i = rangeStart + 1; i < rangeEnd; i++) {
             if (i % 2 == 0) {
-                System.out.println(i + " ");
+                System.out.print(i + " ");
             }
         }
 
@@ -121,7 +121,7 @@ public class Main {
             largeArray[index++] = thirdArray[i];
         }
 
-        System.out.println("\nLarge Array is:" + Arrays.toString(largeArray));
+        System.out.println("\n\nLarge Array is:" + Arrays.toString(largeArray));
 
         //Zadatak 7.
 
